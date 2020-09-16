@@ -1,14 +1,29 @@
+@import "setup";
+@import "typography";
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 body {
     background-color:black;
+    background-image: url(../assets/starry-sky2.gif);
+    background-repeat: repeat;
 }
+
 h1  {
     background-color: white;
     font-size: 30px; 
     text-align: center;   
 }
+
 button {
     padding:10px 20px;
     font-size:20px;
     color:black;
+}
 
+.welcome-text {
+    width: 50%;
 }
