@@ -12,22 +12,36 @@ nasaApp.getImage = function (query) {
             q: query,
         }
     }).then((data) => {
-      console.log(data)
+        console.log(data)
             const htmlTOAppend = `
-            <img src="${data.url}">
+            <img src="${data.url}" class="fit-content">
     
         `
-            $(".display-picture").append(htmlTOAppend);
+            $(".display-picture").append(htmlTOAppend).append(`<button id="info">learn more</button>`);
     })
 }
 
-nasaApp.init = function () {
-   
-
-    $('button').on('click', function () {
-        nasaApp.getImage()
-        
+nasaApp.learnMore = function () {
+    $('#info').on('click', function () {
+        const explanation = `<p>${data.explanation}</p>`
+        $('#description').append(explanation);
     })
+}
+
+nasaApp.welcomeText = function() {
+    $('#container').append(`
+        <h2 class="hide">WELCOME TO THE GALAXY</h2>
+        <p class="hide">You will be able to go the space in just a few seconds. First click the button under the logo and a picture from the Nasa website will be display in the right side of the window. If you like can find more information about this image once you click the button located under the picture.</p>`)
+}
+
+nasaApp.init = function () {
+    nasaApp.welcomeText();
+    $('button').on('click', function () {
+        $('.hide').hide();
+        nasaApp.getImage();
+        $('#new-pic').attr('disabled', true)
+    })
+    nasaApp.learnMore();
 }
 
 // document ready
@@ -35,3 +49,8 @@ nasaApp.init = function () {
 $(function () {
     nasaApp.init();
 })
+
+// Add 'moreInfo' button under <img>
+// Add event listener to moreInfo button-click to allow user to get information about the <img>
+
+// POSSIBLE button disable after initial click OR date randomizer to access new photos

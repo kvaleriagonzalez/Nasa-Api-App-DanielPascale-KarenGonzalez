@@ -34,6 +34,7 @@ h2 {
 p {
     color: white;
     width: 80%;
+    line-height: 25px;
 }
 
 .logo {
@@ -64,5 +65,15 @@ button {
 .flex {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
     margin-bottom: 100px;
+}
+
+.display-picture {
+    width: 100%;
+}
+
+.fit-content {
+    width: 100%;
 }
