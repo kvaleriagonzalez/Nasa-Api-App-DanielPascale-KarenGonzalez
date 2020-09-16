@@ -12,18 +12,57 @@ body {
     background-repeat: repeat;
 }
 
-h1  {
+
+h1 {
     background-color: white;
-    font-size: 30px; 
-    text-align: center;   
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: black;
+    width: 30%;
+    border-radius: 10px;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+    width: 80%;
+}
+
+.logo {
+    width: 40%;
+    margin-bottom: 40px;
 }
 
 button {
     padding:10px 20px;
     font-size:20px;
     color:black;
+    margin: 20px 0;
 }
 
-.welcome-text {
-    width: 50%;
+.side {
+    width: 40%;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
