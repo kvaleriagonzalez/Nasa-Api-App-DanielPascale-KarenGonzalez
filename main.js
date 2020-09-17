@@ -1,5 +1,6 @@
 // creating app object
-const nasaApp= {};
+const nasaApp = {};
+
 
 nasaApp.key = 'CmoGbgUEgJjjmGuGvzJxBuTRbVm7NcHWyPxBlDOX';
 // create a function that gets nasa data
@@ -12,16 +13,15 @@ nasaApp.getImage = function (query) {
             q: query,
         }
     }).then((data) => {
-        console.log(data)
             const htmlTOAppend = `
             <img src="${data.url}" class="fit-content">
-    
         `
             $(".display-picture").append(htmlTOAppend).append(`<button id="info">learn more</button>`);
+        nasaApp.learnMore(data);
     })
 }
 
-nasaApp.learnMore = function () {
+nasaApp.learnMore = function (data) {
     $('#info').on('click', function () {
         const explanation = `<p>${data.explanation}</p>`
         $('#description').append(explanation);
@@ -41,7 +41,6 @@ nasaApp.init = function () {
         nasaApp.getImage();
         $('#new-pic').attr('disabled', true)
     })
-    nasaApp.learnMore();
 }
 
 // document ready
