@@ -12,28 +12,12 @@ body {
     background-repeat: repeat;
 }
 
-
-h1 {
-    background-color: white;
-    font-size: 30px;
-    text-align: center;
-}
-
 button {
     padding: 10px 20px;
     font-size: 20px;
     color: black;
     width: 30%;
     border-radius: 10px;
-}
-
-h2 {
-    color: white;
-}
-
-p {
-    color: white;
-    width: 80%;
 }
 
 .logo {
@@ -64,5 +48,15 @@ button {
 .flex {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
     margin-bottom: 100px;
+}
+
+.display-picture {
+    width: 100%;
+}
+
+.fit-content {
+    width: 100%;
 }
