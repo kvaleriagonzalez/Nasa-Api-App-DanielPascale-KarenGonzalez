@@ -21,8 +21,9 @@ button {
 }
 
 .logo {
-    width: 40%;
-    margin-bottom: 40px;
+    width: 10%;
+    margin-top: 20px;
+    
 }
 
 button {
@@ -59,4 +60,13 @@ button {
 
 .fit-content {
     width: 100%;
+}
+
+.flex-nav {
+    display:flex;
+}
+
+.learn-more-text {
+    padding-bottom: 50px;
+    margin: 0 auto;
 }

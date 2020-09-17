@@ -23,8 +23,9 @@ nasaApp.getImage = function (query) {
 
 nasaApp.learnMore = function (data) {
     $('#info').on('click', function () {
-        const explanation = `<p>${data.explanation}</p>`
+        const explanation = `<p class="learn-more-text">${data.explanation}</p>`
         $('#description').append(explanation);
+        $('#info').attr('disabled', true)
     })
 }
 
@@ -39,7 +40,7 @@ nasaApp.init = function () {
     $('button').on('click', function () {
         $('.hide').hide();
         nasaApp.getImage();
-        $('#new-pic').attr('disabled', true)
+        $('#display-none').hide();
     })
 }
 
