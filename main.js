@@ -29,17 +29,10 @@ nasaApp.learnMore = function (data) {
     })
 }
 
-// nasaApp.welcomeText = function() {
-//     $('#container').append(`
-//         <h2 id="animatrix" class="hide">WELCOME TO THE GALAXY</h2>
-//         <p class="hide">You will be able to go the space in just a few seconds.</p> 
-//         <p class="hide">First click the button under the logo and a picture from the Nasa website will be display in the right side of the window.</p>
-//         <p class="hide">If you like can find more information about this image once you click the button located under the picture.</p>`);
-//         $('#animatrix').addClass('animate-typing');
-// }
+
 
 nasaApp.init = function () {
-    nasaApp.welcomeText();
+   
     $('button').on('click', function () {
         $('.hide').hide();
         nasaApp.getImage();

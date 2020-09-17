@@ -269,6 +269,21 @@ p {
   width: 80%;
 }
 
+@media (max-width: 1300px) {
+  .logo {
+    width: 18%;
+  }
+}
+
+@media (max-width: 1150px) {
+  h1 {
+    margin-left: 200px;
+  }
+  .new-pic {
+    width: 50%;
+  }
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -291,6 +306,10 @@ button {
 .logo {
   width: 10%;
   margin-top: 20px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 button {
@@ -356,56 +375,4 @@ button {
 .learn-more-text {
   padding-bottom: 50px;
   margin: 0 auto;
-}
-
-.line {
-  width: 16em;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 180%;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-/*Animation*/
-.anim-typewriter {
-  -webkit-animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 600ms steps(40) infinite normal;
-          animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 600ms steps(40) infinite normal;
-}
-
-@-webkit-keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 16em;
-  }
-}
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 16em;
-  }
-}
-
-@-webkit-keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
