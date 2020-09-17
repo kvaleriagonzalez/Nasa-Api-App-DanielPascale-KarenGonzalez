@@ -32,5 +32,31 @@
 @media (max-width: 768px) {
      div.flex-box {
           flex-direction: column-reverse;
+          flex-wrap: nowrap;
+     }
+     .flex.side {
+          width: 70%;
+          margin: 100px auto 40px;
+          &.click {
+               margin: 0;
+          }
+     }
+     .display-picture {
+          margin-left: 0;
+     }
+}
+
+@media (max-width: 580px) {
+     div.flex-box {
+          height: 50vh;
+     }
+     h1 {
+          margin-left: 40px;
+     }
+}
+
+@media (max-width: 420px){
+     .flex.side {
+          width: 85%;
      }
 }

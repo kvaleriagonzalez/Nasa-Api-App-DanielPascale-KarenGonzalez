@@ -16,7 +16,7 @@ nasaApp.getImage = function (query) {
             const htmlTOAppend = `
             <img src="${data.url}" class="fit-content">
         `
-            $(".display-picture").append(htmlTOAppend).append(`<button id="info">learn more</button>`);
+            $(".display-picture").append(htmlTOAppend).append(`<button class="read-more" id="info">learn more</button>`);
         nasaApp.learnMore(data);
     })
 }

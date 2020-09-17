@@ -51,6 +51,10 @@ button {
     height: 100vh;
 }
 
+.center {
+    margin: 20px auto;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
@@ -76,3 +80,7 @@ button {
     margin: 0 auto;
 }
 
+.read-more {
+    width: 50%;
+    margin: 60px 0 60px 80px;
+}
