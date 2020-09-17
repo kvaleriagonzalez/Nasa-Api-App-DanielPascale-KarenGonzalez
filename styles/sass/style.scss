@@ -31,6 +31,7 @@ button {
     font-size:20px;
     color:black;
     margin: 20px 0;
+    text-align: center;
 }
 
 .side {
@@ -73,35 +74,37 @@ button {
 
 .line { 
     
-      width: 16em;
-      border-right: 2px solid rgba(255, 255, 255, 0.75);
-      font-size: 180%;
-      white-space: nowrap;
-      overflow: hidden;transform: translateY(-50%);
+    width: 16em;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
 
 }
 
+
 /*Animation*/
+// TODO credit animation author
 
 .anim-typewriter {
-      animation: typewriter 4s steps(40) 1s 1 normal both,
-      blinkTextCursor 600ms steps(40) infinite normal;
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 600ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
-      from {
-            width: 0;
-      }
-      to {
-            width: 16em;
-      }
+    from {
+        width: 0;
+    }
+    to {
+        width: 16em;
+    }
 }
 
 @keyframes blinkTextCursor {
-      from {
-            border-right-color: rgba(255, 255, 255, 0.75);
-      }
-      to {
-            border-right-color: transparent;
-      }
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
