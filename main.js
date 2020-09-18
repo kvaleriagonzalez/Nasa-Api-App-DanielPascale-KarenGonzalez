@@ -1,8 +1,9 @@
 // creating app object
 const nasaApp = {};
 
-
+// API key
 nasaApp.key = 'CmoGbgUEgJjjmGuGvzJxBuTRbVm7NcHWyPxBlDOX';
+
 // create a function that gets nasa data
 nasaApp.getImage = function (query) {
     $.ajax({
@@ -12,41 +13,42 @@ nasaApp.getImage = function (query) {
         data: {
             q: query,
         }
+    // Get data from API, then append new data to the page
     }).then((data) => {
             const htmlTOAppend = `
-            <img src="${data.url}" class="fit-content">
+            <img src="${data.url}" alt="${data.title}" class="fit-content">
         `
-            $(".display-picture").append(htmlTOAppend).append(`<button class="read-more" id="info">learn more</button>`);
+        // display image on the page
+        $(".display-picture").append(htmlTOAppend).append(`<button class="read-more" id="info">learn more</button>`);
+        // run nasaApp.learnMore function
         nasaApp.learnMore(data);
     })
 }
 
+// create a function that displays information about the NASA image to the page
 nasaApp.learnMore = function (data) {
+    // create an event listener for a 'click' on the button
     $('#info').on('click', function () {
+        // create a variable to append to the page
         const explanation = `<p class="learn-more-text">${data.explanation}</p>`
         $('#description').append(explanation);
+        // After the button has been clicked, disable it
         $('#info').attr('disabled', true)
     })
 }
 
-
-
+// Create an app initialization function
 nasaApp.init = function () {
-   
+    // Create an event listener for a 'click' on the button
     $('button').on('click', function () {
+        // hide the welcome message and 'getImage' button (with a class of .hide)
         $('.hide').hide();
+        // run nasaApp.getImage function to get and display photo
         nasaApp.getImage();
-        $('#display-none').hide();
     })
 }
 
 // document ready
-
 $(function () {
     nasaApp.init();
 })
-
-// Add 'moreInfo' button under <img>
-// Add event listener to moreInfo button-click to allow user to get information about the <img>
-
-// POSSIBLE button disable after initial click OR date randomizer to access new photos

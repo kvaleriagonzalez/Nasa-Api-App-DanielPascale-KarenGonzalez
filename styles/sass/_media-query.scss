@@ -1,10 +1,6 @@
-@media (max-width: 1300px) {
-     .logo {
-          width: 18%;
-     }
-}
+// Media queries for the app
 
-
+// Breakpoint for 1150px (large screens)
 @media (max-width: 1150px) {
      h1 {
           margin-left: 200px;
@@ -21,23 +17,31 @@
      .display-picture {
           margin-left: -100px;
      }
-     p.learn-more-text {
-          margin-top: 200px;
-     }
 }
 
+// Breakpoint for 900px (Laptops)
 @media (max-width: 900px) {
      h1 {
           margin-right: 40px;
      }
+     div.flex-box {
+          height: 50vh;
+     }
+     div.flex {
+          width: 55%;
+     }
+     .learn-more-text {
+          margin-top: 200px;
+     }
 }
 
+// Breakpoint for 768px (Tablets)
 @media (max-width: 768px) {
      div.flex-box {
           flex-direction: column-reverse;
           flex-wrap: nowrap;
      }
-     .flex.side {
+     .flex {
           width: 70%;
           margin: 100px auto 40px;
           &.click {
@@ -47,13 +51,12 @@
      .display-picture {
           margin-left: 0;
      }
-   
      .fit-content {
           margin-top: 200px;
-      }
-
+     }
 }
 
+// Breakpoint for 580px (Mobile - large)
 @media (max-width: 580px) {
      div.flex-box {
           height: 50vh;
@@ -63,11 +66,9 @@
      }
 }
 
+// Breakpoint for 420px (Mobile)
 @media (max-width: 420px){
-     .flex.side {
+     .flex {
           width: 85%;
-     }
-     
-          
-
+     }         
 }
