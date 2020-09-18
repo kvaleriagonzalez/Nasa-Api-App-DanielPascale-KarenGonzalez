@@ -292,6 +292,9 @@ p {
   .display-picture {
     margin-left: -100px;
   }
+  p.learn-more-text {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -320,9 +323,6 @@ p {
     margin-left: 0;
   }
   .fit-content {
-    margin-top: 200px;
-  }
-  p.learn-more-text {
     margin-top: 200px;
   }
 }
