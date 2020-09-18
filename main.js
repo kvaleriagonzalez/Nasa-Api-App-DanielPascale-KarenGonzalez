@@ -29,8 +29,6 @@ nasaApp.learnMore = function (data) {
     })
 }
 
-
-
 nasaApp.init = function () {
    
     $('button').on('click', function () {
