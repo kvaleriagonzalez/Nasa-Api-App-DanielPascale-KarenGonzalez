@@ -13,29 +13,35 @@
 </head>
 
 <body>
+    <!-- header begins here -->
     <header>
         <div class="wrapper">
-        <div class="flex-nav">
-            <div >
-                <a href="./date.html">
-                    <img class="logo" src="./assets/nasa-logo.png" alt="NASA Logo">
-                </a>
+            <div class="flex-nav">
+                <div>
+                    <a href="./date.html">
+                        <img class="logo" src="./assets/nasa-logo.png" alt="NASA Logo">
+                    </a>
+                </div>
+                <h1>Journey To The Stars</h1>
             </div>
-            <h1>Journey To The Stars</h1>
-        </div>
+            <!-- app content displayed here -->
             <div class="flex-box">
-                <div class="flex side click" id="display-none">
+                <div class="flex click hide">
+                    <!-- buttton to be clicked for NASA picture -->
                     <button id="new-pic" class="new-pic">click here</button>
                 </div>
-                <div class="flex side">
+                <div class="flex">
                     <div class="display-picture" id="container">
+                        <!-- Welcome message explaining how to use app -->
                         <div>
-                            <h2 class="animate-typing center hide">WELCOME TO THE GALAXY</h2>
-                            <p data-type-speed="100"  data-type-delay="4000"class="animate-typing center hide">You will be able to go to space in just a few seconds.</p>
-                            <p data-type-speed="100"  data-type-delay="10000" class="animate-typing center hide">Click the button to the left and a picture from the NASA website will be display in the right side of the window.</p>
-                            <p data-type-speed="100"  data-type-delay="22000" class="animate-typing center hide">If you like can find more information about this image once you click the button located under the
-                            picture.</p>
-
+                            <h2 class="animate-typing hide">WELCOME TO THE GALAXY</h2>
+                            <p data-type-speed="100" data-type-delay="4000" class="animate-typing hide">You will be able
+                                to go to space in just a few seconds.</p>
+                            <p data-type-speed="100" data-type-delay="10000" class="animate-typing hide">Click the
+                                button to the left and a picture from the NASA website will be displayed in the right
+                                side of the window.</p>
+                            <p data-type-speed="100" data-type-delay="22000" class="animate-typing hide">If you would
+                                like more information, click the button located under the picture.</p>
                         </div>
                         <!-- Container for the Image displayed -->
                     </div>
@@ -44,10 +50,13 @@
             <div id="description">
                 <!-- description of the displayed image -->
             </div>
-
+            <!-- end of header -->
     </header>
+
+    <!-- JS imports -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js'
         integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <!-- jQuery plugin for typewriting animation effect -->
     <script src="js-animation/jquery.animateTyping.js"></script>
     <script src="main.js"></script>
 </body>
