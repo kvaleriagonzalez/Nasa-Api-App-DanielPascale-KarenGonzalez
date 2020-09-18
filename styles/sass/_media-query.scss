@@ -44,6 +44,14 @@
      .display-picture {
           margin-left: 0;
      }
+   
+     .fit-content {
+          margin-top: 200px;
+      }
+
+     p.learn-more-text {
+          margin-top: 200px;
+     }
 }
 
 @media (max-width: 580px) {
@@ -59,4 +67,7 @@
      .flex.side {
           width: 85%;
      }
+     
+          
+
 }
