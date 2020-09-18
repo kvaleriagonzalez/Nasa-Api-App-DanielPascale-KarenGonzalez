@@ -37,6 +37,10 @@
           flex-direction: column-reverse;
           flex-wrap: nowrap;
      }
+
+     .display-picture {
+          margin-left: 0;
+     }
 }
 
 // Breakpoint for 768px (Tablets)
@@ -49,14 +53,16 @@
                margin: 0;
           }
      }
-     .display-picture {
-          margin-left: 0;
-     }
-     .fit-content {
-          margin-top: 200px;
-     }
+     
      
 }
+
+@media (max-width: 900px) and (min-width: 700px) {
+     h1 {
+          margin-bottom:100px;
+     }
+}
+
 
 // Breakpoint for 580px (Mobile - large)
 @media (max-width: 580px) {
@@ -69,6 +75,12 @@
        h2.animate-typing {
           margin-top: 200px;
      }   
+     .read-more, .new-pic {
+          width: 70%;
+     }
+     .display-picture {
+          margin-top: 0;
+     }
 }
 
 // Breakpoint for 420px (Mobile)

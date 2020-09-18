@@ -22,8 +22,28 @@ nasaApp.getImage = function (query) {
         $(".display-picture").append(htmlTOAppend).append(`<button class="read-more" id="info">learn more</button>`);
         // run nasaApp.learnMore function
         nasaApp.learnMore(data);
+
     })
 }
+
+/*$("form").submit(function (event) {
+    if ($("input").first().val() === "correct") {
+        $("span").text("Validated...").show();
+        return;
+    }
+
+nasaApp.submitButton = function (data){
+    //get the value of the user input 
+    $('form').submit(function () {
+    //create variable to store value
+    const date = $(this).val();
+    console.log(date)
+    //create variable to get data 
+
+    //display picture after obtaining value and data 
+    })
+
+}*/
 
 // create a function that displays information about the NASA image to the page
 nasaApp.learnMore = function (data) {
@@ -46,6 +66,7 @@ nasaApp.init = function () {
         // run nasaApp.getImage function to get and display photo
         nasaApp.getImage();
     })
+    nasaApp.submitButton()
 }
 
 // document ready
