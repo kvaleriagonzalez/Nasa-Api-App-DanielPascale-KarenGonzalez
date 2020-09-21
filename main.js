@@ -5,14 +5,11 @@ const nasaApp = {};
 nasaApp.key = 'CmoGbgUEgJjjmGuGvzJxBuTRbVm7NcHWyPxBlDOX';
 
 // create a function that gets nasa data
-nasaApp.getImage = function (query) {
+nasaApp.getImage = function () {
     $.ajax({
         url: `https://api.nasa.gov/planetary/apod?api_key=${nasaApp.key}`,
         method: 'GET',
         dataType: 'json',
-        data: {
-            q: query,
-        }
     // Get data from API, then append new data to the page
     }).then((data) => {
             const htmlTOAppend = `
@@ -27,29 +24,35 @@ nasaApp.getImage = function (query) {
 
 }
 
+ nasaApp.getDate = function (query) {
+   $.ajax({
+     url: `https://api.nasa.gov/planetary/apod?api_key=${nasaApp.key}&date=${query}`,
+     method: "GET",
+     dataType: "json",
+     data: {
+       date: query,
+     },
+     // Get data from API, then append new data to the page
+   }).then((data) => {
+    
+     const html = `
+            <img src="${data.url}" alt="${data.title}" class="fit-content">
+        `;
+     $(".picture").append(html);
+
+     // run nasaApp.learnMore function
+     nasaApp.learnMore(data);
+     console.log(data);
+   });
+ };
 
 nasaApp.submitButton = function (data){
     //get the value of the user input 
-    $('form').submit(function () {
-    //create variable to store value
-   const date = $("#date").val();
-    const dataApi = "${data.date}";
-    
-    if (date === dataAPI) {
-        const html =`
-            <img src="${data.url}" alt="${data.title}" class="fit-content">
-        `
-        $(".picture").append(html)
-        
-    }
-
-    else {
-        //do nothing
-    }
-
-    //create variable to get data 
-
-    //display picture after obtaining value and data 
+    $('form').submit(function (e) {
+        e.preventDefault();
+        const date = $("#date").val();
+        console.log(date)
+       nasaApp.getDate(date);
     });
 }
 
@@ -69,12 +72,14 @@ nasaApp.learnMore = function (data) {
 // Create an app initialization function
 nasaApp.init = function () {
     // Create an event listener for a 'click' on the button
-    $('button').on('click', function () {
+    $('#new-pic').on('click', function () {
         // hide the welcome message and 'getImage' button (with a class of .hide)
         $('.hide').hide();
         // run nasaApp.getImage function to get and display photo
         nasaApp.getImage();
     })
+    nasaApp.submitButton();
+  
 }
 
 // document ready
