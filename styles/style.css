@@ -273,14 +273,22 @@ p {
   width: 80%;
 }
 
-a {
+.juno {
+  text-transform: capitalize;
+  margin: 0 auto 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.juno a {
   text-decoration: none;
   color: inherit;
   -webkit-transition: color, .3s ease-in-out;
   transition: color, .3s ease-in-out;
 }
 
-a:hover, a:focus {
+.juno a:hover, .juno a:focus {
   color: #5959fa;
 }
 
