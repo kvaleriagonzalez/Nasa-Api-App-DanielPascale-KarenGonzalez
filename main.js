@@ -38,7 +38,7 @@ nasaApp.getDate = function (query) {
             <img src="${data.url}" alt="${data.title}" class="fit-content"><h2>Happy Birthday!</h2><p>There are trillions of stars in our universe, but today the brightest one is you!</p>
         `;
         // empty the image container and append a new image based on User input
-        $(".picture").empty().append(html);
+        $(".picture").empty().append(html).append(`<p class="learn-more-text">created at<a href="https://junocollege.com/"> Juno College<a/></p>`);
         // run nasaApp.learnMore function
         nasaApp.learnMore(data);
     });
@@ -62,7 +62,7 @@ nasaApp.learnMore = function (data) {
     $('#info').on('click', function () {
         // create a variable to append to the page
         const explanation = `<p class="learn-more-text">${data.explanation}</p>`
-        $('#description').append(explanation);
+        $('#description').append(explanation).append(`<p class="learn-more-text">created at<a href="https://junocollege.com/"> Juno College<a/></p>`);
         // After the button has been clicked, disable it
         $('#info').attr('disabled', true)
     })

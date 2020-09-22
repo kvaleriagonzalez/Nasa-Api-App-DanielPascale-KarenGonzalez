@@ -273,6 +273,17 @@ p {
   width: 80%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color, .3s ease-in-out;
+  transition: color, .3s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: #5959fa;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -408,7 +419,7 @@ button:focus {
 }
 
 .picture p {
-  margin: 0 auto;
+  margin: 0 auto 60px;
 }
 
 @media (max-width: 1150px) {
