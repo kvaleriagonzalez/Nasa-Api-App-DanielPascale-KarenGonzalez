@@ -23,6 +23,7 @@ nasaApp.getImage = function () {
 
 }
 
+// create function to get Birthday photo on user input
 nasaApp.getDate = function (query) {
     $.ajax({
         url: `https://api.nasa.gov/planetary/apod?api_key=${nasaApp.key}&date=${query}`,
@@ -33,21 +34,23 @@ nasaApp.getDate = function (query) {
         },
      // Get data from API, then append new data to the page
     }).then((data) => {
-    
         const html = `
-            <img src="${data.url}" alt="${data.title}" class="fit-content">
+            <img src="${data.url}" alt="${data.title}" class="fit-content"><h2>Happy Birthday!</h2><p>There are trillions of stars in our universe, but today the brightest one is you!</p>
         `;
+        // empty the image container and append a new image based on User input
         $(".picture").empty().append(html);
-     // run nasaApp.learnMore function
+        // run nasaApp.learnMore function
         nasaApp.learnMore(data);
     });
 };
 
 nasaApp.submitButton = function (data){
-    //get the value of the user input 
     $('form').submit(function (e) {
+        // prevent the form submit from refreshing the page
         e.preventDefault();
+        //get the value of the user input on submit
         const date = $("#date").val();
+        // call the getDate function 
         nasaApp.getDate(date);
     });
 }
@@ -80,6 +83,5 @@ nasaApp.init = function () {
 // document ready
 $(function () {
     nasaApp.init();
-
 })
 

@@ -404,6 +404,11 @@ button:focus {
 
 .picture {
   width: 70%;
+  margin: 0 auto;
+}
+
+.picture p {
+  margin: 0 auto;
 }
 
 @media (max-width: 1150px) {
