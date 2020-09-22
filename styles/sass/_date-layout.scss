@@ -1,0 +1,18 @@
+.date-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    button {
+        width: 200px;
+        margin: 20px auto 60px;
+
+    }
+    label {
+        font-size: 20px;
+        margin-top: 60px;
+    }
+}
+
+.picture {
+    width: 70%;
+}

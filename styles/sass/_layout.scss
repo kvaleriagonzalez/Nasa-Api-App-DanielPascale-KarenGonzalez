@@ -23,11 +23,25 @@ button {
 .logo {
     width: 150px;
     margin-top: 20px;
+    border-radius: 50%;
     img{
         width:100%;
     }
 }
 
+button {
+    cursor: pointer;
+}
+
+.logo,
+button {
+    box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, .0);
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, .8);
+    }
+}
 .flex-box {
     display: flex;
     flex-direction: row;

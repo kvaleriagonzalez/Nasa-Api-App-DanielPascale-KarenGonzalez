@@ -19,40 +19,36 @@ nasaApp.getImage = function () {
         $(".display-picture").append(htmlTOAppend).append(`<button class="read-more" id="info">learn more</button>`);
         // run nasaApp.learnMore function
         nasaApp.learnMore(data);
-     console.log(data)
     })
 
 }
 
- nasaApp.getDate = function (query) {
-   $.ajax({
-     url: `https://api.nasa.gov/planetary/apod?api_key=${nasaApp.key}&date=${query}`,
-     method: "GET",
-     dataType: "json",
-     data: {
-       date: query,
-     },
+nasaApp.getDate = function (query) {
+    $.ajax({
+        url: `https://api.nasa.gov/planetary/apod?api_key=${nasaApp.key}&date=${query}`,
+        method: "GET",
+        dataType: "json",
+        data: {
+            date: query,
+        },
      // Get data from API, then append new data to the page
-   }).then((data) => {
+    }).then((data) => {
     
-     const html = `
+        const html = `
             <img src="${data.url}" alt="${data.title}" class="fit-content">
         `;
-     $(".picture").append(html);
-
+        $(".picture").empty().append(html);
      // run nasaApp.learnMore function
-     nasaApp.learnMore(data);
-     console.log(data);
-   });
- };
+        nasaApp.learnMore(data);
+    });
+};
 
 nasaApp.submitButton = function (data){
     //get the value of the user input 
     $('form').submit(function (e) {
         e.preventDefault();
         const date = $("#date").val();
-        console.log(date)
-       nasaApp.getDate(date);
+        nasaApp.getDate(date);
     });
 }
 
@@ -79,7 +75,6 @@ nasaApp.init = function () {
         nasaApp.getImage();
     })
     nasaApp.submitButton();
-  
 }
 
 // document ready

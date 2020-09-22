@@ -248,7 +248,10 @@ h1,
 h2,
 h3,
 label,
-button {
+button,
+form,
+label,
+input {
   font-family: 'Strait', sans-serif;
 }
 
@@ -293,10 +296,30 @@ button {
 .logo {
   width: 150px;
   margin-top: 20px;
+  border-radius: 50%;
 }
 
 .logo img {
   width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo,
+button {
+  -webkit-box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, 0);
+          box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover, .logo:focus,
+button:hover,
+button:focus {
+  -webkit-box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, 0.8);
+          box-shadow: 5px 0px 50px 5px rgba(255, 255, 255, 0.8);
 }
 
 .flex-box {
@@ -356,6 +379,31 @@ button {
 .read-more {
   width: 50%;
   margin: 60px 0 60px 80px;
+}
+
+.date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.date-container button {
+  width: 200px;
+  margin: 20px auto 60px;
+}
+
+.date-container label {
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.picture {
+  width: 70%;
 }
 
 @media (max-width: 1150px) {
